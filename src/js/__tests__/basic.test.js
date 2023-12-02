@@ -6,7 +6,7 @@ test('should sum', () => {
   expect(result).toBe(6);
 });
 //===================================================
-import Team from '../app';
+import Team from '../app';// импорт функции
 //входные данные
 const character = [{
   name: 'Лучник',
@@ -55,7 +55,7 @@ const character1 = [{
   ]
 }];
 
-const team = new Team();
+const team = new Team();// присваеваем конструктор
 
 test('add()добавляет персонажа в команду', () => {
   team.add(character);
