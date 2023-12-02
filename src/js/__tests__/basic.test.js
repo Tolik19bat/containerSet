@@ -7,10 +7,10 @@ test('should sum', () => {
 });
 //===================================================
 import Team from '../app';
-
 //входные данные
 const character = [{
   name: 'Лучник',
+/* eslint-disable */name: 'Лучник',//дубль свойство
   type: 'Bowman',
   health: 50,
   level: 3,
@@ -77,15 +77,16 @@ test('toArray() должен преобразовать членов коман�
 
   const result = team.toArray(character);
 
- const arr = [
-  [ 'name', 'Лучник' ],
-  [ 'type', 'Bowman' ],
-  [ 'health', 50 ],
-  [ 'level', 3 ],
-  [ 'attack', 40 ],
-  [ 'defence', 10 ],
-  [ 'special', [ [Object], [Object] ] ]
-];
+  const arr = [
+    ['name', 'Лучник'],
+    ['type', 'Bowman'],
+    ['health', 50],
+    ['level', 3],
+    ['attack', 40],
+    ['defence', 10],
+    ['special', [[Object], [Object]]]
+  ];
 
   expect(result).toEqual(arr);
 });
+//===================================finish
