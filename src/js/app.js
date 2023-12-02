@@ -39,7 +39,7 @@ export default class Team {                 //создаём класс
   }
 
   add(argument) {                                 //метод добавления карточки игрока
-    if (this.members) {                           //если карточка присутствует в переменной
+    if (this.members.has(argument)) {             //если карточка присутствует в переменной
       throw new Error('character already exists');//выводим ошибку
     } else {                                      //если отсутствует
     this.members.add(argument);                   //добовляем новую
